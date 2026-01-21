@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drongo Foundation | Donate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Razorpay -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=REPLACE_LATER&currency=INR"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Drongo Foundation (TDF)</h1>
+        <p>Section 8 Company, India</p>
+        <p>
+            Village + Post: Krishnapur<br>
+            PS: Lalgola, District: Murshidabad<br>
+            West Bengal, India – 742148
+        </p>
+        <a href="https://gm5m.com" target="_blank">Main Website: GM5M</a>
+    </header>
+
+    <main>
+
+        <section id="legal">
+            <p>GST: XXXXX</p>
+            <p>CIN: XXXXX</p>
+            <p>12A: XXXXX</p>
+            <p>80G: XXXXX</p>
+        </section>
+
+        <section id="donate-box">
+
+            <h2>Make a Donation</h2>
+
+            <label>Donor Name</label>
+            <input type="text" id="donorName" placeholder="Your Name">
+
+            <label>Donation Amount (INR)</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+
+            <label>Agent / Referral Token (optional)</label>
+            <input type="text" id="agentToken" placeholder="If provided by agent">
+
+            <button id="razorpayBtn">Donate via Razorpay</button>
+
+            <div id="paypal-button-container"></div>
+
+        </section>
+
+        <section id="cash">
+            <h3>Cash Donation</h3>
+            <p>Cash donations accepted at registered office only.</p>
+            <p>Additional 2% handling charge applicable.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© Drongo Foundation</p>
+        <a href="https://gm5m.wordpress.com" target="_blank">Old Blog</a>
+        <br>
+        <a href="donations.html">View Public Donation List</a>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/commission.js"></script>
+    <script src="js/sheet.js"></script>
+    <script src="js/donation.js"></script>
+
+</body>
+
+</html>
