@@ -1,0 +1,39 @@
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/donations.json")
+    .then(res => res.json())
+    .then(data => renderTable(data))
+    .catch(err => console.warn("Failed to load donations", err));
+});
+
+function renderTable(data) {
+  const table = document.getElementById("donationTable");
+  if (!table) return;
+
+  table.innerHTML = `
+    <tr>
+      <th>Serial</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Donor</th>
+      <th>Receipt</th>
+      <th>Agent</th>
+      <th>Amount</th>
+      <th>Mode</th>
+    </tr>
+  `;
+
+  data.forEach(d => {
+    table.innerHTML += `
+      <tr>
+        <td>${d.serial}</td>
+        <td>${d.date}</td>
+        <td>${d.time}</td>
+        <td>${d.donor}</td>
+        <td>${d.receipt}</td>
+        <td>${d.agent}</td>
+        <td>${d.amount}</td>
+        <td>${d.mode}</td>
+      </tr>
+    `;
+  });
+}
